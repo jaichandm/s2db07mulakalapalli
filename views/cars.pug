@@ -3,10 +3,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}. My name is Jaichand Mulakalapalli
-  - let results=[{car_brand:"Nissan Versa",car_color:"Silver",car_cost:"16205"},{car_brand:"Chevrolet Spark",car_color:"Nitro Yellow",car_cost:"15207"},{car_brand:"Hyundai Elantra",car_color:"Grey",car_cost:"21434"}]
+  - let items = results
   div(class="container-fluid")
     div(class="row")
-      each cars, index in results
+      each cars, index in items
         div(class="col-sm-2" onclick=`buy(${index+1})`) #{cars.car_brand} - #{cars.car_color} - $#{cars.car_cost}
   
   script.
