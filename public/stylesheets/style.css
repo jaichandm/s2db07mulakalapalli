@@ -16,6 +16,6 @@ a {
   text-shadow:3px 3px 6px green;
   font-style:oblique;
   background-color: whitesmoke;
-  font-family:'Courier New', Courier, monospace;
+  font-family:'Courier New', Courier, monospace ;
   box-shadow: 10px 5px 5px lightgreen;
 }
