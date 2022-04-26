@@ -4,12 +4,19 @@ block content
   h1= title
   p Welcome to #{title}. My name is Jaichand Mulakalapalli
   - let items = results
+  br
+  p Click here to add new item to the collection
+    button(class="btn btn-success m-2" onclick="dispatch('/cars/create')") Create
   div(class="container-fluid")
     div(class="row m-1")
       each cars, index in items
         - let destination = `dispatch(\"/cars/update?id=${cars._id}\")`
-        div(class="row-sm-2 m-1" onclick=`buy(${index+1})`) #{cars.car_brand} - #{cars.car_color} - $#{cars.car_cost}
-          button.btn( class="btn-primary ml-1", onclick= destination) Update
+        - let destination1 = `dispatch(\"/cars/detail?id=${cars._id}\")`
+        - let destination2 = `dispatch(\"/cars/delete?id=${cars._id}\")`
+        div(class="row-sm-2 m-1" onclick=`buy(${index+1})`) #{cars.car_brand} - #{cars.car_color} - $#{cars.car_cost}  
+          button.btn( class="btn-warning ml-1", onclick= destination) Update
+          button.btn( class="btn-info ml-1", onclick= destination1) Detail
+          button.btn( class="btn-danger ml-1", onclick= destination2) Delete
   
   script.
     function buy(index){

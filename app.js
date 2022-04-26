@@ -138,7 +138,7 @@ async function recreateDB() {
     console.log("Third object saved in Car")
   });
 
-  let instance8 = new Car({ car_brand: "BMW X3", car_color: 'Tanzanite Blue II Metallic', car_cost: 41950 });
+  let instance8 = new Car({ car_brand: "BMW X3", car_color: 'Tanzanite Blue II Metallic', car_cost: 31950 });
   instance8.save(function (err, doc) {
     if (err) return console.error(err);
     console.log("Fourth object saved in Car")

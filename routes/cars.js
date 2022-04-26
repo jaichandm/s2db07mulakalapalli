@@ -20,10 +20,10 @@ router.get('/', car_controller.car_view_all_Page);
 /* GET detail car page */
 router.get('/detail', car_controller.car_view_one_Page);
 /* GET create car page */
-router.get('/create', car_controller.car_create_Page);
+router.get('/create',secured, car_controller.car_create_Page);
 /* GET create update page */
 router.get('/update',secured, car_controller.car_update_Page);
 /* GET delete car page */
-router.get('/delete', car_controller.car_delete_Page);
+router.get('/delete',secured, car_controller.car_delete_Page);
 
 module.exports = router;
